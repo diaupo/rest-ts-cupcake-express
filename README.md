@@ -1,32 +1,30 @@
+# A Typescript Cupcake Express REST Server 
+This REST server is implemented based on a "cupcake" openapi yaml.
 
 
+## Pre-reqs
+To build and run this app locally you will need a few things:
+- Install Node.js
+- Install tsc (globally)
 
-## How to create the project
-$ npm install -y
+## Getting started
+- Clone this repository
+- Install dependencies
+```
+cd <project_name>
+npm install
+```
 
-$ vi package.json
+- Build and run the project
+```
+tsc
+npm start  (or node dist/index.js)   
+```
 
-## Installing TypeScript
-$ npm i -D typescript @types/express @types/node
-$ npm i --save-dev @types/morgan
-
-this add this block in the package.json 
-
- "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.0.2",
-    "typescript": "^5.5.4"
-  }
-
-  ## Generating tsconfig.json
-  $ npx tsc --init
-
-  $ vi tsconfig.json 
-
-  {
-  "compilerOptions": {
-    ...
-    "outDir": "./dist"   <<<<<<
-    ...
-  }
-}
+## ToDo
+- HTTPS is missing
+- need to connect to a database
+- not testing code yet
+- logging
+- no caching
+- automate typescript compiling
